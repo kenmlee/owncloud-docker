@@ -5,10 +5,13 @@ MAINTAINER Ken Lee <kenmlee@163.com>
 
 ENV REFRESHED_AT 2015-05-20
 
+# The original link in Owncloud installation guide has been premanently removed.
+# Original link: http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key
+# New link: http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/Release.key
 RUN apt-get install -y wget && wget http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key && apt-key add - < Release.key
 
 RUN apt-get -qq update \
     && echo "deb http://download.opensuse.org/repositories/isv:/owncloud:/community/xUbuntud_14.04/ /" \
-        >> /etc/apt/source.list.d/owncloud.list \
+        >> /etc/apt/sources.list.d/owncloud.list \
     && apt-get -qq update \
     && apt-get install -y owncloud
