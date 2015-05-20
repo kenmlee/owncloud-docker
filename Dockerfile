@@ -16,3 +16,5 @@ RUN apt-get -qq update \
     && apt-get -qq update \
     && apt-get -y upgrade \
     && apt-get install -y owncloud
+
+ENTRYPOINT ["apache2ctl", "-DFOREGROUND"]
