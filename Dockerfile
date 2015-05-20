@@ -14,4 +14,5 @@ RUN apt-get -qq update \
     && echo "deb http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/ /" \
         >> /etc/apt/sources.list.d/owncloud.list \
     && apt-get -qq update \
+    && apt-get -y upgrade \
     && apt-get install -y owncloud
