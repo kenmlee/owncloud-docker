@@ -18,3 +18,5 @@ RUN apt-get -qq update \
     && apt-get install -y owncloud
 
 ENTRYPOINT ["apache2ctl", "-DFOREGROUND"]
+
+EXPOSE 80
